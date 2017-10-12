@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="PostgreSQL" id="Project_1392d30" template="Default" database="PostgreSQL" >
+	<schema name="trip" catalogname="trip" schemaname="trip" >
+		<table name="event" >
+			<column name="id" type="serial" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="name" type="text" decimal="0" jt="12" />
+			<column name="date" type="timestamp" length="29" decimal="6" jt="93" />
+			<column name="creator" type="varchar" length="30" decimal="0" jt="12" mandatory="y" />
+			<index name="pk_event" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_event" unique="NORMAL" >
+				<column name="creator" />
+			</index>
+			<fk name="fk_event" to_schema="trip" to_table="user" delete_action="cascade" update_action="cascade" >
+				<fk_column name="creator" pk="login" />
+			</fk>
+		</table>
+		<table name="expense" >
+			<column name="id" type="serial" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="nature" type="text" decimal="0" jt="12" />
+			<column name="cost" type="numeric" length="20" decimal="2" jt="2" >
+				<defo>0</defo>
+			</column>
+			<column name="date" type="timestamp" length="29" decimal="6" jt="93" >
+				<defo>now()</defo>
+			</column>
+			<column name="event_id" type="integer" length="10" decimal="0" jt="4" />
+			<column name="user_login" type="varchar" length="30" decimal="0" jt="12" />
+			<index name="pk_expense" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<constraint name="expense_cost_check" >
+				<string>cost &gt;= (0)::numeric</string>
+			</constraint>
+			<fk name="ref_event_id" to_schema="trip" to_table="event" delete_action="cascade" update_action="cascade" >
+				<fk_column name="event_id" pk="id" />
+			</fk>
+			<fk name="ref_user_login" to_schema="trip" to_table="user" delete_action="cascade" update_action="cascade" >
+				<fk_column name="user_login" pk="login" />
+			</fk>
+		</table>
+		<table name="expense_concerned" >
+			<column name="expense_id" type="integer" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="concerned" type="varchar" length="30" decimal="0" jt="12" mandatory="y" />
+			<index name="pk_expense_concerned" unique="PRIMARY_KEY" >
+				<column name="expense_id" />
+				<column name="concerned" />
+			</index>
+			<fk name="ref_user_login" to_schema="trip" to_table="user" delete_action="cascade" update_action="cascade" >
+				<fk_column name="concerned" pk="login" />
+			</fk>
+			<fk name="ref_expense_id" to_schema="trip" to_table="expense" delete_action="cascade" update_action="cascade" >
+				<fk_column name="expense_id" pk="id" />
+			</fk>
+		</table>
+		<table name="user" >
+			<column name="login" type="varchar" length="30" decimal="0" jt="12" mandatory="y" />
+			<column name="password" type="varchar" length="30" decimal="0" jt="12" />
+			<column name="email" type="varchar" length="50" decimal="0" jt="12" />
+			<index name="pk_user" unique="PRIMARY_KEY" >
+				<column name="login" />
+			</index>
+		</table>
+		<table name="user_event" >
+			<column name="event_id" type="integer" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="user_login" type="varchar" length="30" decimal="0" jt="12" mandatory="y" />
+			<column name="user_weight" type="integer" length="10" decimal="0" jt="4" >
+				<defo>1</defo>
+			</column>
+			<index name="pk_user_event" unique="PRIMARY_KEY" >
+				<column name="event_id" />
+				<column name="user_login" />
+			</index>
+			<fk name="ref_event_id" to_schema="trip" to_table="event" delete_action="cascade" update_action="cascade" >
+				<fk_column name="event_id" pk="id" />
+			</fk>
+			<fk name="ref_user_login" to_schema="trip" to_table="user" delete_action="cascade" update_action="cascade" >
+				<fk_column name="user_login" pk="login" />
+			</fk>
+		</table>
+		<view name="concerned_users_by_expenses" >
+			<view_script><![CDATA[ SELECT e.event_id,
+    ec.concerned AS user_login,
+    e.user_login AS pay_to_user,
+    e.cost,
+    ec.expense_id
+   FROM (trip.expense_concerned ec
+     JOIN trip.expense e ON ((e.id = ec.expense_id)));]]></view_script>
+			<column name="event_id" type="integer" />
+			<column name="user_login" type="varchar" />
+			<column name="pay_to_user" type="varchar" />
+			<column name="cost" type="numeric" />
+			<column name="expense_id" type="integer" />
+		</view>
+		<view name="group_balance" >
+			<view_script><![CDATA[ SELECT expense.user_login,
+    expense.event_id,
+    sum(expense.cost) AS sum
+   FROM trip.expense
+  GROUP BY expense.user_login, expense.event_id;]]></view_script>
+			<column name="user_login" type="varchar" />
+			<column name="event_id" type="integer" />
+			<column name="sum" type="numeric" />
+		</view>
+		<view name="parts_of_expense" >
+			<view_script><![CDATA[ SELECT r.expense_id,
+    sum(r.user_weight) AS parts_nb
+   FROM ( SELECT res.expense_id,
+            res.concerned,
+            u.event_id,
+            u.user_weight
+           FROM (( SELECT ec.expense_id,
+                    ec.concerned,
+                    e.event_id
+                   FROM (trip.expense_concerned ec
+                     JOIN trip.expense e ON ((e.id = ec.expense_id)))) res
+             JOIN trip.user_event u ON ((res.event_id = u.event_id)))
+          WHERE ((res.concerned)::text = (u.user_login)::text)) r
+  GROUP BY r.expense_id, r.event_id;]]></view_script>
+			<column name="expense_id" type="integer" />
+			<column name="parts_nb" type="bigint" />
+		</view>
+		<sequence name="event_id_seq" start="1" />
+		<sequence name="expense_id_seq" start="1" />
+		<procedure name="before_insert_expense_concerned" id="Procedure_368994b" isSystem="false" params_known="y" >
+			<string><![CDATA[CREATE OR REPLACE FUNCTION trip.before_insert_expense_concerned()
+ RETURNS trigger
+ LANGUAGE plpgsql
+AS $function$
+	declare
+		tuple record;
+		event integer;
+	begin
+		select event_id into event from trip.expense
+			where new.expense_id = id;
+		select * into tuple from trip.user_event
+			where event = event_id and new.concerned like user_login;
+			
+		if not found then
+			raise exception '"%" can not be concerned by the expense "%" !', new.concerned, new.expense_id;
+		end if;
+		return new;
+	end;
+$function$
+]]></string>
+			<result_param name="returnValue" jt="1111" type="trigger" />
+			<result_param name="returnValue" jt="1111" type="trigger" />
+			<result_param name="returnValue" jt="1111" type="trigger" />
+			<result_param name="returnValue" jt="1111" type="trigger" />
+		</procedure>
+		<procedure name="drop_all_tables" id="Procedure_270dcdf" isSystem="false" params_known="y" >
+			<string><![CDATA[CREATE OR REPLACE FUNCTION trip.drop_all_tables()
+ RETURNS void
+ LANGUAGE sql
+AS $function$
+	drop table if exists trip."event" cascade;
+	drop table if exists trip."user" cascade;
+	drop table if exists trip."user_event" cascade;
+	drop table if exists trip."expense" cascade;
+	drop table if exists trip."expense_concerned" cascade;
+$function$
+]]></string>
+			<result_param name="returnValue" jt="1111" type="void" />
+			<result_param name="returnValue" jt="1111" type="void" />
+		</procedure>
+		<procedure name="get_user_group_balance" id="Procedure_4b71acc" isSystem="false" params_known="y" >
+			<string><![CDATA[CREATE OR REPLACE FUNCTION trip.get_user_group_balance(integer, character varying)
+ RETURNS numeric
+ LANGUAGE plpgsql
+AS $function$
+	declare
+		res decimal(20, 2);
+	begin
+		select into res sum from trip.group_balance 
+			where event_id = $1 and user_login like $2;
+		return res;
+	end;
+$function$
+]]></string>
+			<input_param name="$1" jt="4" type="int4" />
+			<input_param name="$2" jt="12" type="varchar" />
+			<result_param name="returnValue" jt="2" type="numeric" />
+		</procedure>
+		<procedure name="get_user_situation" id="Procedure_34f6a76" isSystem="false" params_known="y" >
+			<string><![CDATA[CREATE OR REPLACE FUNCTION trip.get_user_situation(integer, character varying, character varying)
+ RETURNS numeric
+ LANGUAGE plpgsql
+AS $function$
+	declare
+		cur cursor for select * from trip.concerned_users_by_expenses c
+			where c.event_id = $1 and c.user_login = $2 and c.pay_to_user = $3;
+		el record;
+		nb integer;
+		w integer;
+		amount decimal(20, 2);
+	begin
+		amount := 0;
+		for el in cur loop
+			select part_nb into nb from trip.parts_of_expense
+				where expense_id = el.expense_id;
+			select u.user_weight into w from trip.user_event u
+				where u.user_login like el.user_login and el.event_id = u.event_id;
+			amount := amount + (el.cost) / nb * w;
+		end loop;
+		RETURN amount;
+	end;
+$function$
+]]></string>
+			<input_param name="$1" jt="4" type="int4" />
+			<input_param name="$2" jt="12" type="varchar" />
+			<input_param name="$3" jt="12" type="varchar" />
+			<result_param name="returnValue" jt="2" type="numeric" />
+		</procedure>
+		<trigger name="before_insert_expense_concerned_trigger" table="expense_concerned" id="Trigger_7820a5" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER before_insert_expense_concerned_trigger BEFORE INSERT ON trip.expense_concerned FOR EACH ROW EXECUTE PROCEDURE trip.before_insert_expense_concerned()]]></string>
+		</trigger>
+	</schema>
+	<connector name="PostgreSQL" database="PostgreSQL" driver_class="org.postgresql.Driver" driver_jar="postgresql-42.1.4.jar" driver_desc="Standard" host="localhost" port="5432" instance="trip" user="raed" passwd="cmFlZA==" />
+	<layout name="Default Layout" id="Layout_54e7634" show_column_type="y" show_relation="columns" >
+		<comment><![CDATA[Default Layout]]></comment>
+		<entity schema="trip" name="expense" color="bfd4f5" x="285" y="150" />
+		<entity schema="trip" name="expense_concerned" color="bfd4f5" x="285" y="375" />
+		<entity schema="trip" name="event" color="bfd4f5" x="525" y="180" />
+		<entity schema="trip" name="user" color="bfd4f5" x="45" y="180" />
+		<entity schema="trip" name="user_event" color="bfd4f5" x="285" y="45" />
+		<entity schema="trip" name="group_balance" color="ff0000" x="465" y="495" />
+		<entity schema="trip" name="parts_of_expense" color="ff0000" x="270" y="495" />
+		<entity schema="trip" name="concerned_users_by_expenses" color="ff0000" x="45" y="495" />
+		<browser id="Browse_523585c" name="Editor" confirm_updates="y" confirmed="y" >
+			<browse_table schema="trip" entity="event" x="20" y="20" width="234" height="118" />
+			<browse_table schema="trip" entity="expense" x="22" y="176" width="394" height="147" />
+			<browse_table schema="trip" entity="expense_concerned" x="449" y="191" width="189" height="186" />
+			<browse_table schema="trip" entity="user" x="272" y="14" width="206" height="141" />
+			<browse_table schema="trip" entity="user_event" x="485" y="11" width="223" height="159" />
+			<browse_table schema="trip" entity="group_balance" x="728" y="20" width="183" height="117" />
+			<browse_table schema="trip" entity="parts_of_expense" x="696" y="160" width="177" height="139" />
+			<browse_table schema="trip" entity="concerned_users_by_expenses" x="927" y="139" width="331" height="195" />
+		</browser>
+	</layout>
+</project>

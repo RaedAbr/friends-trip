@@ -12,9 +12,7 @@ include_once 'includes.php';
 		if (!Session::exist_session()) {
 			header("Location: signin_view.php");
 		} else {
-			$user_login = Session::get_user_login();
-
-			$events = Functions::get_all_events($user_login);
+			$current_login = Session::get_user_login();
 	?>
 	<?php include_once 'head.php'; ?>
 	<body>
@@ -22,7 +20,7 @@ include_once 'includes.php';
 			<a class="navbar-brand" href="#">Fixed top</a>
 		</nav>
 		<div class="container">
-			<h1>Vous êtes identifié comme <?php echo $user_login; ?></h1>
+			<h1>Vous êtes identifié comme <?php echo $current_login; ?></h1>
 			<form action="logoff.php" method="POST">
 				<input type="submit" name="logoff_button" value="Déconnection">
 			</form>
@@ -37,15 +35,70 @@ include_once 'includes.php';
 	        <h1>Petits comptes entre amis</h1>
 	        <p class="lead">Ce site vous permet de noter et partager les dépenses effectuées <br> par et pour le groupe au cours de vacances communes avec vos amis.</p>
 	      </div>
-	      <div id="dynamic-ajax-content">
+	      <div>
+	      	<?php
+	      	$event_added = "";
+	      	$user_event_added = "";
+	      	if (isset($_GET["event_added"]) && isset($_GET["user_event_added"])) {
+	      		if ($_GET["event_added"] == "yes") {
+	      			$event_added = "yes";
+	      			// echo "<div class='".$success."'>L'évènnement a été ajouté avec succès</div>";
+	      		} else {
+	      			$event_added = "no";
+	      			// echo "<div class='".$failure."'>L'évènnement n'a été ajouté!</div>";
+	      		}
+	      		if ($_GET["user_event_added"] == "yes") {
+	      			$user_event_added = "yes";
+	      			// echo "<div class='".$success."'>Les utilisateurs ont été affectés avec succès</div>";
+	      		} else {
+	      			$user_event_added = "no";
+	      			// echo "<div class='".$failure."'>Les utilisateurs n'ont pas été affectés!</div>";
+	      		}
+	      	} ?>
 	      	<?php include_once 'list_events_view.php'; ?>
+	      	<?php include_once 'add_event_view.php'; ?>
 	      </div>
 
 	    </div><!-- /.container -->
 
 
-
 		<?php include_once 'foot.php'; ?>
+
+		<script>
+		$(document).ready(function(){
+			var event_added = "<?php echo $event_added ?>";
+			var user_event_added = "<?php echo $user_event_added ?>";
+			alert(event_added);
+			if (event_added == "yes") {
+				$().toastmessage('showToast', {
+					text : "L'évènnement a été ajouté avec succès.",
+					position : "top-right",
+					type : "success"
+				});
+			}
+			if (event_added == "no") {
+				$().toastmessage('showToast', {
+					text : "L'évènnement n'a été ajouté!",
+					position : "top-right",
+					type : "error"
+				});
+			}
+			if (user_event_added == "yes") {
+				$().toastmessage('showToast', {
+					text : "Les utilisateurs ont été affectés avec succès.",
+					position : "top-right",
+					type : "success"
+				});
+			}
+			if (user_event_added == "no") {
+				$().toastmessage('showToast', {
+					text : "Les utilisateurs n'ont pas été affectés!",
+					position : "top-right",
+					type : "error"
+				});
+			}
+		});
+		</script>
 	</body>
 </html>
 <?php } ?>

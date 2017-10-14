@@ -40,6 +40,9 @@ class Session {
 	}
 
 	public static function get_user_login() {
+		if (!isset($_SESSION["user_login"])) {
+			session_start();
+		}
 		return $_SESSION["user_login"];
 	}
 }

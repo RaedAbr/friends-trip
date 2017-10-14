@@ -26,7 +26,7 @@
     <form class="form-inline my-2 my-lg-0" action="logoff.php" method="POST">
       <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
       <span class="navbar-text" style="padding-right: 10px;">
-        Vous êtes identifié comme <a href="#" class="badge badge-light"><?php echo $user_login; ?></a>
+        Vous êtes identifié comme <a href="#" class="badge badge-light"><?php echo $current_login; ?></a>
       </span>
       <button class="btn btn-primary my-2 my-sm-0" name="logoff_button" type="submit">Déconnexion</button>
     </form>

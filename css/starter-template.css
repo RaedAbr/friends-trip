@@ -10,3 +10,13 @@ body {
 	width: 40px;
 	height: 40px;
 }
+
+.add-user-plus {
+	width: 20px;
+	height: 20px;
+}
+
+.empty-input.form-control[readonly],
+.empty-input {
+	background-color: #f5c6cb;
+}

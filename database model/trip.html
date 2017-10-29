@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>
 <html>
 <head>
-<title>Default Layout</title>
+<title>trip&#95;dataBase</title>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -21,8 +21,8 @@ body {
 </head>
 
 <body>
-<object data='trip.svg' width='705' height='770' type='image/svg+xml' >
-<embed src='trip.svg' width='705' height='770' type='image/svg+xml' />
+<object data='trip.svg' width='720' height='770' type='image/svg+xml' >
+<embed src='trip.svg' width='720' height='770' type='image/svg+xml' />
 <p>The <a href="http://www.adobe.com/svg/viewer/install/main.html">Adobe SVG Viewer</a> is required to view this image !</p></object>
 <br/><br/>
 <div class='card'><div class='card-block'><a name='event' onclick='window.scrollTo(325, 180);return false;' style='cursor:pointer;'><h4 class='card-title'>Table event</h4></a>
@@ -48,9 +48,21 @@ body {
 		<td> timestamp   </td>
 		<td>  </td>
 	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='event.creator'>creator</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
 <tr><th colspan='4'>Indexes</th></tr>
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;event</td>
 		<td> ON id</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>ref_user_login</td>
+		<td > ( creator ) ref <a href='#user'>user</a> (login) </td>
 		<td>  </td>
 	</tr>
 </tbody>
@@ -63,7 +75,7 @@ body {
 <tr><th>Indexes</th><th>Field Name</th><th>Data Type</th><th>Description</th></tr></thead>
 <tbody>
 	<tr>
-		<td>*<svg width='14' height='14'><use xlink:href='#unq'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
 		<td><a name='expense.id'>id</a></td>
 		<td> serial   </td>
 		<td>  </td>
@@ -83,23 +95,23 @@ body {
 	<tr>
 		<td>&nbsp;</td>
 		<td><a name='expense.date'>date</a></td>
-		<td> timestamp   DEFAULT ('now'::text)::timestamp without time zone </td>
+		<td> timestamp   DEFAULT now() </td>
 		<td>  </td>
 	</tr>
 	<tr>
-		<td>*<svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
 		<td><a name='expense.event_id'>event&#95;id</a></td>
 		<td> integer   </td>
 		<td>  </td>
 	</tr>
 	<tr>
-		<td>*<svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
 		<td><a name='expense.user_login'>user&#95;login</a></td>
 		<td> varchar&#40; 30 &#41;   </td>
 		<td>  </td>
 	</tr>
 <tr><th colspan='4'>Indexes</th></tr>
-	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>pk&#95;expense</td>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;expense</td>
 		<td> ON id</td>
 		<td>  </td>
 	</tr>
@@ -144,10 +156,6 @@ body {
 		<td> ON expense&#95;id&#44; concerned</td>
 		<td>  </td>
 	</tr>
-	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;expense&#95;concerned</td>
-		<td> ON expense&#95;id</td>
-		<td>  </td>
-	</tr>
 <tr><th colspan='4'>Foreign Keys</th></tr>
 	<tr>
 		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>ref_user_login</td>
@@ -155,13 +163,13 @@ body {
 		<td>  </td>
 	</tr>
 	<tr>
-		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_expense_concerned_expense</td>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>ref_expense_id</td>
 		<td > ( expense&#95;id ) ref <a href='#expense'>expense</a> (id) </td>
 		<td>  </td>
 	</tr>
 <tr><th colspan='4'>Triggers</th></tr>
 	<tr>
-		<td>&nbsp;</td><td> before_insert_expense_concerned_trigger </td><td>  </td><td> </td>
+		<td>&nbsp;</td><td> before_insert_expense_concerned_trigger </td><td> <pre>CREATE TRIGGER before&#95;insert&#95;expense&#95;concerned&#95;trigger BEFORE INSERT ON trip&#46;expense&#95;concerned FOR EACH ROW EXECUTE PROCEDURE trip&#46;before&#95;insert&#95;expense&#95;concerned&#40;&#41;</pre> </td><td> </td>
 	</tr>
 </tbody>
 </table></div></div>
@@ -250,8 +258,8 @@ body {
 </thead>
 <tbody>
 	<tr><td> SELECT e&#46;event&#95;id&#44;
-    ec&#46;concerned AS user&#95;login&#44;
-    e&#46;user&#95;login AS pay&#95;to&#95;user&#44;
+    ec&#46;concerned&#44;
+    e&#46;user&#95;login AS expense&#95;owner&#44;
     e&#46;cost&#44;
     ec&#46;expense&#95;id
    FROM &#40;trip&#46;expense&#95;concerned ec

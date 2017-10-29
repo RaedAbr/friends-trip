@@ -228,10 +228,11 @@ $function$
 		<entity schema="trip" name="concerned_users_by_expenses" color="ff0000" x="45" y="495" />
 		<entity schema="trip" name="user_event" color="bfd4f5" x="285" y="45" />
 		<script name="Sql_Editor" id="Editor_5aeec7e" language="SQL" >
-			<string><![CDATA[select * from trip.user where login ilike 'r%';]]></string>
+			<string><![CDATA[INSERT INTO trip.event (name, date, creator) VALUES ('fff', now(), 'raedd')
+   RETURNING trip.event.id;]]></string>
 		</script>
 		<browser id="Browse_523585c" name="Editor" confirm_updates="y" confirmed="y" >
-			<browse_table schema="trip" entity="event" x="20" y="20" width="234" height="118" />
+			<browse_table schema="trip" entity="event" x="20" y="20" width="476" height="214" />
 			<browse_table schema="trip" entity="expense" x="22" y="176" width="394" height="147" />
 			<browse_table schema="trip" entity="expense_concerned" x="449" y="191" width="189" height="186" />
 			<browse_table schema="trip" entity="user" x="262" y="14" width="220" height="145" />

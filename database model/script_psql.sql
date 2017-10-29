@@ -4,13 +4,15 @@
 create table if not exists trip."event" (
 	"id" serial constraint pk_event primary key,
 	"name" text,
-	"date" timestamp
+	"date" timestamp,
+	"creator" varchar(30) constraint ref_user_login references trip."user"("login")
+		on delete cascade on update cascade
 	);
 
 create table if not exists trip."user" (
 	"login" varchar(30) constraint pk_user primary key,
 	"password" varchar(30),
-	"email" varchar(50)
+	"email" varchar(50) 
 	);
 
 create table if not exists trip."user_event" (
@@ -110,7 +112,8 @@ create or replace function trip.get_user_situation(integer, varchar(30), varchar
 	as $$
 	declare
 		cur cursor for select * from trip.concerned_users_by_expenses c
-			where c.event_id = $1 and c.user_login = $2 and c.pay_to_user = $3;
+			where c.event_id = $1 and c.expense_owner like $2 and c.concerned like $3
+			and c.concerned not like $2;
 		el record;
 		nb integer;
 		w integer;
@@ -118,11 +121,11 @@ create or replace function trip.get_user_situation(integer, varchar(30), varchar
 	begin
 		amount := 0;
 		for el in cur loop
-			select part_nb into nb from trip.parts_of_expense
+			select parts_nb into nb from trip.parts_of_expense
 				where expense_id = el.expense_id;
 
 			select u.user_weight into w from trip.user_event u
-				where u.user_login like el.user_login and el.event_id = u.event_id;
+				where u.user_login like el.concerned and el.event_id = u.event_id;
 
 			amount := amount + (el.cost) / nb * w;
 		end loop;
@@ -161,13 +164,13 @@ create or replace view trip.parts_of_expense as
 /**
 	@summary Get the list of the concerned users by expenses
 	@column event_id(integer) : the event id
-	@column user_login(varchar(30)) : the user login
-	@column pay_to_user(decimal(20, 2)) : the beneficiary
+	@column concerned(varchar(30)) : the user login
+	@column expense_owner(decimal(20, 2)) : the beneficiary
 	@column cost(decimal(20, 2)) : the cost of the expense
 	@column expense_id(integer) : the expense id
 **/
 create or replace view trip.concerned_users_by_expenses as
-	select e.event_id, ec.concerned as user_login, e.user_login as pay_to_user, e.cost, ec.expense_id 
+	select e.event_id, ec.concerned, e.user_login as expense_owner, e.cost, ec.expense_id 
 	from trip.expense_concerned ec join trip.expense e on e.id = ec.expense_id;
 
 ------------

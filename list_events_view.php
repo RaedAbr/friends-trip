@@ -22,7 +22,7 @@
   		<div class="list-group">
   		<?php 
   			foreach ($events as $event) { ?>
-			  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+			  <a href="event_view.php?id=<?php echo $event["id"]; ?>" class="list-group-item list-group-item-action flex-column align-items-start">
 			    <div class="d-flex w-100 justify-content-between">
 			      <h5 class="mb-1"><?php echo $event["name"] ?></h5>
 			      <small class="text-muted"><?php echo $event["date"] ?></small>

@@ -8,10 +8,10 @@
 	<meta name="author" content="Raed" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<!-- Custom styles for this template -->
 	<link href="css/jquery-ui.css" rel="stylesheet">
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<link href="css/starter-template.css" rel="stylesheet">
 	<link href="css/jquery.toastmessage.css" rel="stylesheet">
+	<script src="js/jquery.toastmessage.js"></script>
 </head>

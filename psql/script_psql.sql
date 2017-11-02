@@ -57,6 +57,8 @@ create or replace function trip.drop_all_tables() returns void as $$
 	drop table if exists trip."user_event" cascade;
 	drop table if exists trip."expense" cascade;
 	drop table if exists trip."expense_concerned" cascade;
+	drop function trip.before_insert_expense_concerned() cascade;
+	drop function trip.get_user_situation ( integer, character varying, character varying) cascade ;
 $$ language sql;
 
 /**
@@ -79,23 +81,6 @@ create or replace function trip.before_insert_expense_concerned() returns trigge
 			raise exception '"%" can not be concerned by the expense "%" !', new.concerned, new.expense_id;
 		end if;
 		return new;
-	end;
-$$ language plpgsql;
-
-/**
-	@summary Get a user's amount paid for the group in an event.
-	@param integer : the event id
-	@param varchar(30) : the user login
-	@returns decimal(20, 2) : the amount paid
-	@example select get_user_group_balance(2, 'raed');
-**/
-create or replace function trip.get_user_group_balance(integer, varchar(30)) returns decimal(20, 2) as $$
-	declare
-		res decimal(20, 2);
-	begin
-		select into res sum from trip.group_balance 
-			where event_id = $1 and user_login like $2;
-		return res;
 	end;
 $$ language plpgsql;
 
@@ -133,19 +118,6 @@ create or replace function trip.get_user_situation(integer, varchar(30), varchar
 		RETURN amount;
 	end;
 $$ language plpgsql;
-
-------------
---views--
-------------
-/**
-	@summary Get all users' amount paid for the group in an event.
-	@column user_login(varchar(30)) : the user login
-	@colomn event_id(integer) : the event id
-	@colomn sum(decimal(20, 2)) : the amount paid
-**/
-create or replace view trip.group_balance as
-	select user_login, event_id, sum(cost) from trip.expense
-		group by user_login, event_id;
 
 /**
 	@summary Get the list of expenses and their parts number.

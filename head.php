@@ -6,7 +6,7 @@
 	<meta name="description" content="Petits comptes entre amis" />
 	<meta name="keywords" content="voyage, amis, comptes" />
 	<meta name="author" content="Raed" />
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="icons/favicon.ico">
 	<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link href="css/jquery-ui.css" rel="stylesheet">
 	<script src="js/jquery-3.2.1.min.js"></script>

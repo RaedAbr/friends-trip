@@ -3,8 +3,9 @@
 define('HOST', 'localhost');
 define('PORT', '5432');
 define('DBNAME', 'trip');
+// à changer avec le bon postgres user name et password
 define('USER', 'raed');
-define('PASSWORD', 'raed');
+define('PASSWORD', 'raed.1993');
 
 class Connection {
 	private $db;

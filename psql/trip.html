@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>
 <html>
 <head>
-<title>trip&#95;dataBase</title>
+<title>trip</title>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -21,11 +21,11 @@ body {
 </head>
 
 <body>
-<object data='trip.svg' width='720' height='770' type='image/svg+xml' >
-<embed src='trip.svg' width='720' height='770' type='image/svg+xml' />
+<object data='trip.svg' width='735' height='725' type='image/svg+xml' >
+<embed src='trip.svg' width='735' height='725' type='image/svg+xml' />
 <p>The <a href="http://www.adobe.com/svg/viewer/install/main.html">Adobe SVG Viewer</a> is required to view this image !</p></object>
 <br/><br/>
-<div class='card'><div class='card-block'><a name='event' onclick='window.scrollTo(325, 180);return false;' style='cursor:pointer;'><h4 class='card-title'>Table event</h4></a>
+<div class='card'><div class='card-block'><a name='event' onclick='window.scrollTo(340, 165);return false;' style='cursor:pointer;'><h4 class='card-title'>Table event</h4></a>
 <table class='table-sm table-bordered'>
 <thead>
 <tr><th>Indexes</th><th>Field Name</th><th>Data Type</th><th>Description</th></tr></thead>
@@ -134,7 +134,7 @@ body {
 </table></div></div>
 
 <br/><br/>
-<div class='card'><div class='card-block'><a name='expense_concerned' onclick='window.scrollTo(85, 375);return false;' style='cursor:pointer;'><h4 class='card-title'>Table expense_concerned</h4></a>
+<div class='card'><div class='card-block'><a name='expense_concerned' onclick='window.scrollTo(85, 360);return false;' style='cursor:pointer;'><h4 class='card-title'>Table expense_concerned</h4></a>
 <table class='table-sm table-bordered'>
 <thead>
 <tr><th>Indexes</th><th>Field Name</th><th>Data Type</th><th>Description</th></tr></thead>
@@ -158,24 +158,24 @@ body {
 	</tr>
 <tr><th colspan='4'>Foreign Keys</th></tr>
 	<tr>
-		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>ref_user_login</td>
-		<td > ( concerned ) ref <a href='#user'>user</a> (login) </td>
-		<td>  </td>
-	</tr>
-	<tr>
 		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>ref_expense_id</td>
 		<td > ( expense&#95;id ) ref <a href='#expense'>expense</a> (id) </td>
 		<td>  </td>
 	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>ref_user_login</td>
+		<td > ( concerned ) ref <a href='#user'>user</a> (login) </td>
+		<td>  </td>
+	</tr>
 <tr><th colspan='4'>Triggers</th></tr>
 	<tr>
-		<td>&nbsp;</td><td> before_insert_expense_concerned_trigger </td><td> <pre>CREATE TRIGGER before&#95;insert&#95;expense&#95;concerned&#95;trigger BEFORE INSERT ON trip&#46;expense&#95;concerned FOR EACH ROW EXECUTE PROCEDURE trip&#46;before&#95;insert&#95;expense&#95;concerned&#40;&#41;</pre> </td><td> </td>
+		<td>&nbsp;</td><td> before_insert_expense_concerned_trigger </td><td>  </td><td> </td>
 	</tr>
 </tbody>
 </table></div></div>
 
 <br/><br/>
-<div class='card'><div class='card-block'><a name='user' onclick='window.scrollTo(60, 180);return false;' style='cursor:pointer;'><h4 class='card-title'>Table user</h4></a>
+<div class='card'><div class='card-block'><a name='user' onclick='window.scrollTo(60, 165);return false;' style='cursor:pointer;'><h4 class='card-title'>Table user</h4></a>
 <table class='table-sm table-bordered'>
 <thead>
 <tr><th>Indexes</th><th>Field Name</th><th>Data Type</th><th>Description</th></tr></thead>
@@ -250,7 +250,7 @@ body {
 </table></div></div>
 
 <br/><br/>
-<div class='card'><div class='card-block'><a name='concerned_users_by_expenses' onclick='window.scrollTo(60, 495);return false;' style='cursor:pointer;'><h2>View concerned_users_by_expenses</h2></a>
+<div class='card'><div class='card-block'><a name='concerned_users_by_expenses' onclick='window.scrollTo(60, 450);return false;' style='cursor:pointer;'><h2>View concerned_users_by_expenses</h2></a>
 <table class='table-sm table-bordered'>
 <thead>
 	<tr>
@@ -267,22 +267,7 @@ body {
 </tbody>
 </table></div></div>
 <br/><br/>
-<div class='card'><div class='card-block'><a name='group_balance' onclick='window.scrollTo(265, 495);return false;' style='cursor:pointer;'><h2>View group_balance</h2></a>
-<table class='table-sm table-bordered'>
-<thead>
-	<tr>
-		<th><a name='group_balance'>Query</a></th></tr>
-</thead>
-<tbody>
-	<tr><td> SELECT expense&#46;user&#95;login&#44;
-    expense&#46;event&#95;id&#44;
-    sum&#40;expense&#46;cost&#41; AS sum
-   FROM trip&#46;expense
-  GROUP BY expense&#46;user&#95;login&#44; expense&#46;event&#95;id&#59;</td></tr>
-</tbody>
-</table></div></div>
-<br/><br/>
-<div class='card'><div class='card-block'><a name='parts_of_expense' onclick='window.scrollTo(70, 495);return false;' style='cursor:pointer;'><h2>View parts_of_expense</h2></a>
+<div class='card'><div class='card-block'><a name='parts_of_expense' onclick='window.scrollTo(175, 450);return false;' style='cursor:pointer;'><h2>View parts_of_expense</h2></a>
 <table class='table-sm table-bordered'>
 <thead>
 	<tr>

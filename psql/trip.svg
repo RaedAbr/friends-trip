@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' text-rendering='optimizeLegibility'   width='720' height='770' viewbox='0 0 720 770' >
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' text-rendering='optimizeLegibility'   width='735' height='725' viewbox='0 0 735 725' >
   <script type='text/ecmascript'>
   <![CDATA[
   function hghl(el) { for ( var i in el ){ var elem = document.getElementById(el[i]); if ( elem != null ) elem.setAttribute('class','highlight');  }  }
@@ -201,74 +201,74 @@
 </defs>
 
 <!-- ============= Desktop ============= -->
-<rect x='1' y='1' width='718' height='768' rx='7' ry='7' style='fill:url(#layoutBgB); stroke:#777777; stroke-width:0.5;' />
-<rect x='1' y='1' width='718' height='768' rx='7' ry='7' style='fill:url(#layoutBgA); stroke:#777777; stroke-width:0.5;' />
+<rect x='1' y='1' width='733' height='723' rx='7' ry='7' style='fill:url(#layoutBgB); stroke:#777777; stroke-width:0.5;' />
+<rect x='1' y='1' width='733' height='723' rx='7' ry='7' style='fill:url(#layoutBgA); stroke:#777777; stroke-width:0.5;' />
 
 <!-- ============= Legend ============= -->
 <g transform='translate(10,10)'>
-  <!-- <rect x='10' y='10' width='330' height='56' rx='6' ry='6' style='fill:url(#legendGradient);filter:url(#shadow);'/>  -->
-  <!-- <text x='20' y='43'>trip_dataBase</text> 
-  <text x='20' y='57' style='fill:#aaaaaa; font-size:11px;'><tspan>Read table &amp; column comments as mouse-over tooltips.</tspan></text>  -->
-<!-- <a xlink:href='https://www.dbschema.com'> <path class='logo' d='m 32.309685,20.963194 c 0.411708,4.732616 -4.298055,7.925636 -8.723583,6.970196 -6.616967,1.8448 -2.656457,-6.434594 -3.911969,-10.01566 -2.15469,-5.89407 6.06247,-3.508505 9.167655,-2.863689 2.199228,1.054873 3.389343,3.582089 3.467897,5.909153 z m -3.720955,0.01451 c 0.434195,-4.414565 -7.644142,-5.37533 -5.137307,0.107342 -1.812268,5.992146 5.532698,4.379388 5.137307,-0.107342 z' /> <path class='logo' d='m 44.329732,23.050637 c 0.850982,5.097305 -5.250434,4.558924 -7.144836,4.752415 -6.418993,1.64391 -1.872992,-7.49274 -3.541914,-10.942842 -2.499646,-3.817859 5.939283,-4.402698 3.538545,-0.13612 -1.287874,4.989123 4.215411,-1.154796 5.956717,2.809584 0.840273,0.970849 1.168829,2.272413 1.191488,3.516963 z m -3.519477,-0.09299 c -1.398216,-5.518069 -6.361061,2.717467 -0.984368,1.810718 0.686994,-0.30388 1.029454,-1.087638 0.984368,-1.810718 z' /> <path class='logo' d='m 52.234961,23.301163 c 0.954818,5.035675 -8.606408,6.284861 -6.262292,1.674914 6.000358,-1.604717 -5.188764,-7.870044 1.75972,-10.384908 2.288682,-3.253567 6.399287,3.075831 2.304111,2.48058 -2.124941,2.016587 2.688777,3.89858 2.198472,6.229403 z' /> <path class='logo' d='m 60.204336,21.349224 c -4.894917,-1.916474 -3.458707,5.391212 0.347494,3.37231 2.120589,6.821713 -10.599623,1.664746 -6.906229,-3.691132 0.354172,-3.663246 9.875349,-4.711252 6.558735,0.318822 z' /> <path class='logo' d='m 71.730617,20.654299 c 0.0013,2.316285 0.190131,4.655698 0.07825,6.958009 -6.532419,3.303565 -0.660423,-8.722256 -6.009639,-5.821653 -0.818815,2.024533 1.726403,6.746337 -1.95327,6.005484 -3.458346,-1.137537 -0.696275,-7.713407 -1.833252,-10.994208 -2.308916,-3.710131 5.93704,-4.164951 3.518609,0.0063 -1.462376,6.166445 5.169629,-2.857523 6.19931,3.846079 z' /> <path class='logo' d='m 82.245738,22.378957 c -0.24581,2.448954 -9.386766,0.8867 -3.885979,2.877055 3.312576,-2.99157 5.250902,3.334514 0.482647,2.665545 -7.415384,1.492275 -7.823196,-11.597641 -0.275476,-10.032117 2.068161,0.391458 3.682204,2.408824 3.678808,4.489517 z m -3.414436,-0.578473 c -1.124703,-4.072004 -5.087405,2.125488 -0.316922,0.156453 z' /> <path class='logo' d='m 98.936899,27.222794 c -4.73541,2.718339 -3.1239,-3.406557 -3.92611,-6.050494 -4.66985,-1.438471 0.21621,6.932413 -3.41219,6.438039 -4.46096,1.160054 -0.22824,-5.774711 -3.31526,-6.700429 -3.410722,1.082173 1.04451,9.536575 -4.745091,6.372895 0.746632,-3.355214 -2.776394,-10.269232 3.034971,-9.038963 -0.058,2.544602 5.00686,-2.785359 6.00342,1.37844 3.42021,-4.316316 7.851251,0.524966 6.24018,4.690538 0.0379,0.969988 0.0954,1.940046 0.12008,2.909974 z' /> <path class='logo' d='m 110.47859,22.686058 c 0.91826,2.682088 0.13016,6.890551 -3.0725,4.397004 -1.63641,1.077877 -7.664291,0.541832 -7.09365,-4.114836 -0.907891,-4.692933 5.14729,-5.625578 7.24058,-4.40354 3.85932,-1.686263 3.13176,1.271515 2.92557,4.121372 z m -3.12695,0.0704 c -1.46278,-5.460062 -6.61615,2.5826 -1.08221,1.782003 0.70431,-0.272594 1.13111,-1.037444 1.08221,-1.782003 z' /> </a> -->
+  <!-- <rect x='10' y='10' width='330' height='56' rx='6' ry='6' style='fill:url(#legendGradient);filter:url(#shadow);'/> 
+  <text x='20' y='43'>trip</text> 
+  <text x='20' y='57' style='fill:#aaaaaa; font-size:11px;'><tspan>Read table &amp; column comments as mouse-over tooltips.</tspan></text> 
+<a xlink:href='https://www.dbschema.com'> <path class='logo' d='m 32.309685,20.963194 c 0.411708,4.732616 -4.298055,7.925636 -8.723583,6.970196 -6.616967,1.8448 -2.656457,-6.434594 -3.911969,-10.01566 -2.15469,-5.89407 6.06247,-3.508505 9.167655,-2.863689 2.199228,1.054873 3.389343,3.582089 3.467897,5.909153 z m -3.720955,0.01451 c 0.434195,-4.414565 -7.644142,-5.37533 -5.137307,0.107342 -1.812268,5.992146 5.532698,4.379388 5.137307,-0.107342 z' /> <path class='logo' d='m 44.329732,23.050637 c 0.850982,5.097305 -5.250434,4.558924 -7.144836,4.752415 -6.418993,1.64391 -1.872992,-7.49274 -3.541914,-10.942842 -2.499646,-3.817859 5.939283,-4.402698 3.538545,-0.13612 -1.287874,4.989123 4.215411,-1.154796 5.956717,2.809584 0.840273,0.970849 1.168829,2.272413 1.191488,3.516963 z m -3.519477,-0.09299 c -1.398216,-5.518069 -6.361061,2.717467 -0.984368,1.810718 0.686994,-0.30388 1.029454,-1.087638 0.984368,-1.810718 z' /> <path class='logo' d='m 52.234961,23.301163 c 0.954818,5.035675 -8.606408,6.284861 -6.262292,1.674914 6.000358,-1.604717 -5.188764,-7.870044 1.75972,-10.384908 2.288682,-3.253567 6.399287,3.075831 2.304111,2.48058 -2.124941,2.016587 2.688777,3.89858 2.198472,6.229403 z' /> <path class='logo' d='m 60.204336,21.349224 c -4.894917,-1.916474 -3.458707,5.391212 0.347494,3.37231 2.120589,6.821713 -10.599623,1.664746 -6.906229,-3.691132 0.354172,-3.663246 9.875349,-4.711252 6.558735,0.318822 z' /> <path class='logo' d='m 71.730617,20.654299 c 0.0013,2.316285 0.190131,4.655698 0.07825,6.958009 -6.532419,3.303565 -0.660423,-8.722256 -6.009639,-5.821653 -0.818815,2.024533 1.726403,6.746337 -1.95327,6.005484 -3.458346,-1.137537 -0.696275,-7.713407 -1.833252,-10.994208 -2.308916,-3.710131 5.93704,-4.164951 3.518609,0.0063 -1.462376,6.166445 5.169629,-2.857523 6.19931,3.846079 z' /> <path class='logo' d='m 82.245738,22.378957 c -0.24581,2.448954 -9.386766,0.8867 -3.885979,2.877055 3.312576,-2.99157 5.250902,3.334514 0.482647,2.665545 -7.415384,1.492275 -7.823196,-11.597641 -0.275476,-10.032117 2.068161,0.391458 3.682204,2.408824 3.678808,4.489517 z m -3.414436,-0.578473 c -1.124703,-4.072004 -5.087405,2.125488 -0.316922,0.156453 z' /> <path class='logo' d='m 98.936899,27.222794 c -4.73541,2.718339 -3.1239,-3.406557 -3.92611,-6.050494 -4.66985,-1.438471 0.21621,6.932413 -3.41219,6.438039 -4.46096,1.160054 -0.22824,-5.774711 -3.31526,-6.700429 -3.410722,1.082173 1.04451,9.536575 -4.745091,6.372895 0.746632,-3.355214 -2.776394,-10.269232 3.034971,-9.038963 -0.058,2.544602 5.00686,-2.785359 6.00342,1.37844 3.42021,-4.316316 7.851251,0.524966 6.24018,4.690538 0.0379,0.969988 0.0954,1.940046 0.12008,2.909974 z' /> <path class='logo' d='m 110.47859,22.686058 c 0.91826,2.682088 0.13016,6.890551 -3.0725,4.397004 -1.63641,1.077877 -7.664291,0.541832 -7.09365,-4.114836 -0.907891,-4.692933 5.14729,-5.625578 7.24058,-4.40354 3.85932,-1.686263 3.13176,1.271515 2.92557,4.121372 z m -3.12695,0.0704 c -1.46278,-5.460062 -6.61615,2.5826 -1.08221,1.782003 0.70431,-0.272594 1.13111,-1.037444 1.08221,-1.782003 z' /> </a> -->
 </g>
 
 <g transform='translate(0,110)'>
 <!-- ============= Fk 'expense_ref_event_id' ============= -->
-<path id='expense_ref_event_id'  onmouseover="hghl(['expense_ref_event_id','trip.expense.event_id','trip.event.id'])" onmouseout="uhghl(['expense_ref_event_id','trip.expense.event_id','trip.event.id'])" transform='translate(7,0)' class='scene' d='M 450 180 L 510,180' >
+<path id='expense_ref_event_id'  onmouseover="hghl(['expense_ref_event_id','trip.expense.event_id','trip.event.id'])" onmouseout="uhghl(['expense_ref_event_id','trip.expense.event_id','trip.event.id'])" transform='translate(7,0)' class='scene' d='M 450 165 L 525,165' >
 	<title>Fk ref_event_id
 expense ref event ( event_id -&gt; id )</title>
 </path>
-<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 450 180 L 510,180' ></path>
-<text x='457' y='175' transform='rotate(0 457,175)' title='Fk ref_event_id
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 450 165 L 525,165' ></path>
+<text x='457' y='160' transform='rotate(0 457,160)' title='Fk ref_event_id
 expense ref event ( event_id -&gt; id )' class='relName' style='fill:#5f789f'>event_id</text>
 <!-- ============= Fk 'expense_ref_user_login' ============= -->
-<path id='expense_ref_user_login'  onmouseover="hghl(['expense_ref_user_login','trip.expense.user_login','trip.user.login'])" onmouseout="uhghl(['expense_ref_user_login','trip.expense.user_login','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 270 195 L 210,195' >
+<path id='expense_ref_user_login'  onmouseover="hghl(['expense_ref_user_login','trip.expense.user_login','trip.user.login'])" onmouseout="uhghl(['expense_ref_user_login','trip.expense.user_login','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 270 180 L 210,180' >
 	<title>Fk ref_user_login
 expense ref user ( user_login -&gt; login )</title>
 </path>
-<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 270 195 L 210,195' ></path>
-<text x='218' y='190' transform='rotate(0 218,190)' title='Fk ref_user_login
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 270 180 L 210,180' ></path>
+<text x='218' y='175' transform='rotate(0 218,175)' title='Fk ref_user_login
 expense ref user ( user_login -&gt; login )' class='relName' style='fill:#5f789f'>user_login</text>
-<!-- ============= Fk 'expense_concerned_ref_user_login' ============= -->
-<path id='expense_concerned_ref_user_login'  onmouseover="hghl(['expense_concerned_ref_user_login','trip.expense_concerned.concerned','trip.user.login'])" onmouseout="uhghl(['expense_concerned_ref_user_login','trip.expense_concerned.concerned','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 270 375 L 202,375 Q 195,375 195,367 L 195,270' >
-	<title>Fk ref_user_login
-expense_concerned ref user ( concerned -&gt; login )</title>
-</path>
-<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 270 375 L 202,375 Q 195,375 195,367 L 195,270' ></path>
-<text x='218' y='370' transform='rotate(0 218,370)' title='Fk ref_user_login
-expense_concerned ref user ( concerned -&gt; login )' class='relName' style='fill:#5f789f'>concerned</text>
-<!-- ============= Fk 'expense_concerned_ref_expense_id' ============= -->
-<path id='expense_concerned_ref_expense_id'  onmouseover="hghl(['expense_concerned_ref_expense_id','trip.expense_concerned.expense_id','trip.expense.id'])" onmouseout="uhghl(['expense_concerned_ref_expense_id','trip.expense_concerned.expense_id','trip.expense.id'])" transform='translate(7,0)' class='scene' d='M 300 360 L 300,285' >
-	<title>Fk ref_expense_id
-expense_concerned ref expense ( expense_id -&gt; id )</title>
-</path>
-<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 300 360 L 300,285' ></path>
-<text x='302' y='355' transform='rotate(270 302,355)' title='Fk ref_expense_id
-expense_concerned ref expense ( expense_id -&gt; id )' class='relName' style='fill:#5f789f'>expense_id</text>
-<!-- ============= Fk 'event_ref_user_login' ============= -->
-<path id='event_ref_user_login'  onmouseover="hghl(['event_ref_user_login','trip.event.creator','trip.user.login'])" onmouseout="uhghl(['event_ref_user_login','trip.event.creator','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 510 255 L 472,255 Q 465,255 465,262 L 465,292 Q 465,300 457,300 L 187,300 Q 180,300 180,292 L 180,270' >
-	<title>Fk ref_user_login
-event ref user ( creator -&gt; login )</title>
-</path>
-<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 510 255 L 472,255 Q 465,255 465,262 L 465,292 Q 465,300 457,300 L 187,300 Q 180,300 180,292 L 180,270' ></path>
-<text x='476' y='250' transform='rotate(0 476,250)' title='Fk ref_user_login
-event ref user ( creator -&gt; login )' class='relName' style='fill:#5f789f'>creator</text>
 <!-- ============= Fk 'user_event_ref_event_id' ============= -->
-<path id='user_event_ref_event_id'  onmouseover="hghl(['user_event_ref_event_id','trip.user_event.event_id','trip.event.id'])" onmouseout="uhghl(['user_event_ref_event_id','trip.user_event.event_id','trip.event.id'])" transform='translate(7,0)' class='scene' d='M 450 120 L 532,120 Q 540,120 540,127 L 540,165' >
+<path id='user_event_ref_event_id'  onmouseover="hghl(['user_event_ref_event_id','trip.user_event.event_id','trip.event.id'])" onmouseout="uhghl(['user_event_ref_event_id','trip.user_event.event_id','trip.event.id'])" transform='translate(7,0)' class='scene' d='M 450 120 L 547,120 Q 555,120 555,127 L 555,150' >
 	<title>Fk ref_event_id
 user_event ref event ( event_id -&gt; id )</title>
 </path>
-<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 450 120 L 532,120 Q 540,120 540,127 L 540,165' ></path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 450 120 L 547,120 Q 555,120 555,127 L 555,150' ></path>
 <text x='457' y='115' transform='rotate(0 457,115)' title='Fk ref_event_id
 user_event ref event ( event_id -&gt; id )' class='relName' style='fill:#5f789f'>event_id</text>
 <!-- ============= Fk 'user_event_ref_user_login' ============= -->
-<path id='user_event_ref_user_login'  onmouseover="hghl(['user_event_ref_user_login','trip.user_event.user_login','trip.user.login'])" onmouseout="uhghl(['user_event_ref_user_login','trip.user_event.user_login','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 270 105 L 202,105 Q 195,105 195,112 L 195,165' >
+<path id='user_event_ref_user_login'  onmouseover="hghl(['user_event_ref_user_login','trip.user_event.user_login','trip.user.login'])" onmouseout="uhghl(['user_event_ref_user_login','trip.user_event.user_login','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 270 105 L 202,105 Q 195,105 195,112 L 195,150' >
 	<title>Fk ref_user_login
 user_event ref user ( user_login -&gt; login )</title>
 </path>
-<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 270 105 L 202,105 Q 195,105 195,112 L 195,165' ></path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 270 105 L 202,105 Q 195,105 195,112 L 195,150' ></path>
 <text x='218' y='100' transform='rotate(0 218,100)' title='Fk ref_user_login
 user_event ref user ( user_login -&gt; login )' class='relName' style='fill:#5f789f'>user_login</text>
+<!-- ============= Fk 'expense_concerned_ref_expense_id' ============= -->
+<path id='expense_concerned_ref_expense_id'  onmouseover="hghl(['expense_concerned_ref_expense_id','trip.expense_concerned.expense_id','trip.expense.id'])" onmouseout="uhghl(['expense_concerned_ref_expense_id','trip.expense_concerned.expense_id','trip.expense.id'])" transform='translate(7,0)' class='scene' d='M 300 345 L 300,285' >
+	<title>Fk ref_expense_id
+expense_concerned ref expense ( expense_id -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 300 345 L 300,285' ></path>
+<text x='302' y='340' transform='rotate(270 302,340)' title='Fk ref_expense_id
+expense_concerned ref expense ( expense_id -&gt; id )' class='relName' style='fill:#5f789f'>expense_id</text>
+<!-- ============= Fk 'expense_concerned_ref_user_login' ============= -->
+<path id='expense_concerned_ref_user_login'  onmouseover="hghl(['expense_concerned_ref_user_login','trip.expense_concerned.concerned','trip.user.login'])" onmouseout="uhghl(['expense_concerned_ref_user_login','trip.expense_concerned.concerned','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 270 360 L 202,360 Q 195,360 195,352 L 195,255' >
+	<title>Fk ref_user_login
+expense_concerned ref user ( concerned -&gt; login )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 270 360 L 202,360 Q 195,360 195,352 L 195,255' ></path>
+<text x='218' y='355' transform='rotate(0 218,355)' title='Fk ref_user_login
+expense_concerned ref user ( concerned -&gt; login )' class='relName' style='fill:#5f789f'>concerned</text>
+<!-- ============= Fk 'event_ref_user_login' ============= -->
+<path id='event_ref_user_login'  onmouseover="hghl(['event_ref_user_login','trip.event.creator','trip.user.login'])" onmouseout="uhghl(['event_ref_user_login','trip.event.creator','trip.user.login'])" transform='translate(7,0)' class='scene' d='M 525 240 L 472,240 Q 465,240 465,247 L 465,292 Q 465,300 457,300 L 187,300 Q 180,300 180,292 L 180,255' >
+	<title>Fk ref_user_login
+event ref user ( creator -&gt; login )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 525 240 L 472,240 Q 465,240 465,247 L 465,292 Q 465,300 457,300 L 187,300 Q 180,300 180,292 L 180,255' ></path>
+<text x='491' y='235' transform='rotate(0 491,235)' title='Fk ref_user_login
+event ref user ( creator -&gt; login )' class='relName' style='fill:#5f789f'>creator</text>
 <!-- ============= Table 'expense' ============= -->
 <rect class='entity' x='285' y='143' width='165' height='135' rx='7' ry='7' style='stroke:none'/>
 <path d='M 285.00 169.00 L 285.00 150.00 Q 285.00 143.00 292.00 143.00 L 443.00 143.00 Q 450.00 143.00 450.00 150.00 L 450.00 169.00 L285.00 169.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
@@ -294,114 +294,60 @@ integer</title></a>
 varchar(30)</title></a>
 <a xlink:href='#expense.user_login'><use id='fk' x='439' y='251' xlink:href='#fk'/><title>References user ( user_login -&gt; login ) </title></a>
 
-<!-- ============= Table 'expense_concerned' ============= -->
-<rect class='entity' x='285' y='368' width='165' height='75' rx='7' ry='7' style='stroke:none'/>
-<path d='M 285.00 394.00 L 285.00 375.00 Q 285.00 368.00 292.00 368.00 L 443.00 368.00 Q 450.00 368.00 450.00 375.00 L 450.00 394.00 L285.00 394.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
-<rect class='entity' x='285' y='368' width='165' height='75' rx='7' ry='7' style='fill:none;stroke:#5f656e'/>
-<line class='delim' x1='285.000000' y1='394.000000' x2='450.000000' y2='394.000000' style='stroke:#5f656e'/>
-<line class='delim' x1='300.000000' y1='394.000000' x2='300.000000' y2='443.000000' style='stroke:#5f656e'/>
-<line class='delim' x1='439.000000' y1='394.000000' x2='439.000000' y2='443.000000' style='stroke:#5f656e'/>
-<a xlink:href='#expense_concerned'><text x='308' y='386'>expense_concerned</text><title>Table trip.expense_concerned</title></a>
-  <use id='nn' x='287' y='402' xlink:href='#nn'/><a xlink:href='#expense_concerned.expense_id'><use id='pk' x='287' y='401' xlink:href='#pk'/><title>Pk pk_expense_concerned ( expense_id, concerned ) </title></a>
-<a xlink:href='#expense_concerned.expense_id'><text id='trip.expense_concerned.expense_id' x='303' y='411' onmouseover="hghl(['expense_concerned_ref_expense_id','trip.expense.id'])" onmouseout="uhghl(['expense_concerned_ref_expense_id','trip.expense.id'])">expense_id</text><text x='435' y='412' text-anchor='end' class='colType'>integer</text><title>expense_id
-* integer</title></a>
-<a xlink:href='#expense_concerned.expense_id'><use id='fk' x='439' y='401' xlink:href='#fk'/><title>References expense ( expense_id -&gt; id ) </title></a>
-  <use id='nn' x='287' y='417' xlink:href='#nn'/><a xlink:href='#expense_concerned.concerned'><use id='pk' x='287' y='416' xlink:href='#pk'/><title>Pk pk_expense_concerned ( expense_id, concerned ) </title></a>
-<a xlink:href='#expense_concerned.concerned'><text id='trip.expense_concerned.concerned' x='303' y='426' onmouseover="hghl(['expense_concerned_ref_user_login','trip.user.login'])" onmouseout="uhghl(['expense_concerned_ref_user_login','trip.user.login'])">concerned</text><text x='435' y='427' text-anchor='end' class='colType'>varchar(30)</text><title>concerned
-* varchar(30)</title></a>
-<a xlink:href='#expense_concerned.concerned'><use id='fk' x='439' y='416' xlink:href='#fk'/><title>References user ( concerned -&gt; login ) </title></a>
-
-<!-- ============= Table 'event' ============= -->
-<rect class='entity' x='525' y='173' width='150' height='105' rx='7' ry='7' style='stroke:none'/>
-<path d='M 525.00 199.00 L 525.00 180.00 Q 525.00 173.00 532.00 173.00 L 668.00 173.00 Q 675.00 173.00 675.00 180.00 L 675.00 199.00 L525.00 199.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
-<rect class='entity' x='525' y='173' width='150' height='105' rx='7' ry='7' style='fill:none;stroke:#5f656e'/>
-<line class='delim' x1='525.000000' y1='199.000000' x2='675.000000' y2='199.000000' style='stroke:#5f656e'/>
-<line class='delim' x1='540.000000' y1='199.000000' x2='540.000000' y2='278.000000' style='stroke:#5f656e'/>
-<line class='delim' x1='664.000000' y1='199.000000' x2='664.000000' y2='278.000000' style='stroke:#5f656e'/>
-<a xlink:href='#event'><text x='581' y='191'>event</text><title>Table trip.event</title></a>
-  <use id='nn' x='527' y='207' xlink:href='#nn'/><a xlink:href='#event.id'><use id='pk' x='527' y='206' xlink:href='#pk'/><title>Pk pk_event ( id ) </title></a>
-<a xlink:href='#event.id'><text id='trip.event.id' x='543' y='216' onmouseover="hghl(['expense_ref_event_id','trip.expense.event_id','user_event_ref_event_id','trip.user_event.event_id'])" onmouseout="uhghl(['expense_ref_event_id','trip.expense.event_id','user_event_ref_event_id','trip.user_event.event_id'])">id</text><text x='660' y='217' text-anchor='end' class='colType'>serial</text><title>id
-* serial</title></a>
-<a xlink:href='#event.id'><use id='ref' x='664' y='206' xlink:href='#ref'/><title>Referred by expense ( event_id -&gt; id ) 
-Referred by user_event ( event_id -&gt; id ) </title></a>
-  <a xlink:href='#event.name'><text id='trip.event.name' x='543' y='231'>name</text><text x='660' y='232' text-anchor='end' class='colType'>text</text><title>name
-text</title></a>
-<text x='672' y='228' text-anchor='end' class='colType'>t</text>  <a xlink:href='#event.date'><text id='trip.event.date' x='543' y='246'>date</text><text x='660' y='247' text-anchor='end' class='colType'>timestamp</text><title>date
-timestamp</title></a>
-<text x='672' y='243' text-anchor='end' class='colType'>d</text>  <a xlink:href='#event.creator'><text id='trip.event.creator' x='543' y='261' onmouseover="hghl(['event_ref_user_login','trip.user.login'])" onmouseout="uhghl(['event_ref_user_login','trip.user.login'])">creator</text><text x='660' y='262' text-anchor='end' class='colType'>varchar(30)</text><title>creator
+<!-- ============= Table 'parts_of_expense' ============= -->
+<rect class='entity' x='375' y='443' width='150' height='75' rx='7' ry='7' style='stroke:none'/>
+<path d='M 375.00 469.00 L 375.00 450.00 Q 375.00 443.00 382.00 443.00 L 518.00 443.00 Q 525.00 443.00 525.00 450.00 L 525.00 469.00 L375.00 469.00 ' style='fill:url(#tbg_ff0000);stroke:1;stroke-opacity:0.1;' />
+<rect class='entity' x='375' y='443' width='150' height='75' rx='7' ry='7' style='fill:none;stroke:#6e5f5f'/>
+<line class='delim' x1='375.000000' y1='469.000000' x2='525.000000' y2='469.000000' style='stroke:#6e5f5f'/>
+<line class='delim' x1='390.000000' y1='469.000000' x2='390.000000' y2='518.000000' style='stroke:#6e5f5f'/>
+<line class='delim' x1='514.000000' y1='469.000000' x2='514.000000' y2='518.000000' style='stroke:#6e5f5f'/>
+<use id='view' x='510' y='443' xlink:href='#view'/>
+<a xlink:href='#parts_of_expense'><text x='396' y='461'>parts_of_expense</text><title>View trip.parts_of_expense</title></a>
+  <a xlink:href='#parts_of_expense.expense_id'><text id='trip.parts_of_expense.expense_id' x='393' y='486'>expense_id</text><text x='510' y='487' text-anchor='end' class='colType'>integer</text><title>expense_id
+integer</title></a>
+<text x='522' y='483' text-anchor='end' class='colType'>#</text>  <a xlink:href='#parts_of_expense.parts_nb'><text id='trip.parts_of_expense.parts_nb' x='393' y='501'>parts_nb</text><text x='510' y='502' text-anchor='end' class='colType'>bigint</text><title>parts_nb
+bigint</title></a>
+<text x='522' y='498' text-anchor='end' class='colType'>#</text>
+<!-- ============= Table 'concerned_users_by_expenses' ============= -->
+<rect class='entity' x='150' y='443' width='195' height='120' rx='7' ry='7' style='stroke:none'/>
+<path d='M 150.00 469.00 L 150.00 450.00 Q 150.00 443.00 157.00 443.00 L 338.00 443.00 Q 345.00 443.00 345.00 450.00 L 345.00 469.00 L150.00 469.00 ' style='fill:url(#tbg_ff0000);stroke:1;stroke-opacity:0.1;' />
+<rect class='entity' x='150' y='443' width='195' height='120' rx='7' ry='7' style='fill:none;stroke:#6e5f5f'/>
+<line class='delim' x1='150.000000' y1='469.000000' x2='345.000000' y2='469.000000' style='stroke:#6e5f5f'/>
+<line class='delim' x1='165.000000' y1='469.000000' x2='165.000000' y2='563.000000' style='stroke:#6e5f5f'/>
+<line class='delim' x1='334.000000' y1='469.000000' x2='334.000000' y2='563.000000' style='stroke:#6e5f5f'/>
+<use id='view' x='330' y='443' xlink:href='#view'/>
+<a xlink:href='#concerned_users_by_expenses'><text x='155' y='461'>concerned_users_by_expenses</text><title>View trip.concerned_users_by_expenses</title></a>
+  <a xlink:href='#concerned_users_by_expenses.event_id'><text id='trip.concerned_users_by_expenses.event_id' x='168' y='486'>event_id</text><text x='330' y='487' text-anchor='end' class='colType'>integer</text><title>event_id
+integer</title></a>
+<text x='342' y='483' text-anchor='end' class='colType'>#</text>  <a xlink:href='#concerned_users_by_expenses.concerned'><text id='trip.concerned_users_by_expenses.concerned' x='168' y='501'>concerned</text><text x='330' y='502' text-anchor='end' class='colType'>varchar(30)</text><title>concerned
 varchar(30)</title></a>
-<a xlink:href='#event.creator'><use id='fk' x='664' y='251' xlink:href='#fk'/><title>References user ( creator -&gt; login ) </title></a>
-
+<text x='342' y='498' text-anchor='end' class='colType'>t</text>  <a xlink:href='#concerned_users_by_expenses.expense_owner'><text id='trip.concerned_users_by_expenses.expense_owner' x='168' y='516'>expense_owner</text><text x='330' y='517' text-anchor='end' class='colType'>varchar(30)</text><title>expense_owner
+varchar(30)</title></a>
+<text x='342' y='513' text-anchor='end' class='colType'>t</text>  <a xlink:href='#concerned_users_by_expenses.cost'><text id='trip.concerned_users_by_expenses.cost' x='168' y='531'>cost</text><text x='330' y='532' text-anchor='end' class='colType'>numeric(20,2)</text><title>cost
+numeric(20,2)</title></a>
+<text x='342' y='528' text-anchor='end' class='colType'>#</text>  <a xlink:href='#concerned_users_by_expenses.expense_id'><text id='trip.concerned_users_by_expenses.expense_id' x='168' y='546'>expense_id</text><text x='330' y='547' text-anchor='end' class='colType'>integer</text><title>expense_id
+integer</title></a>
+<text x='342' y='543' text-anchor='end' class='colType'>#</text>
 <!-- ============= Table 'user' ============= -->
-<rect class='entity' x='45' y='173' width='165' height='90' rx='7' ry='7' style='stroke:none'/>
-<path d='M 45.00 199.00 L 45.00 180.00 Q 45.00 173.00 52.00 173.00 L 203.00 173.00 Q 210.00 173.00 210.00 180.00 L 210.00 199.00 L45.00 199.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
-<rect class='entity' x='45' y='173' width='165' height='90' rx='7' ry='7' style='fill:none;stroke:#5f656e'/>
-<line class='delim' x1='45.000000' y1='199.000000' x2='210.000000' y2='199.000000' style='stroke:#5f656e'/>
-<line class='delim' x1='60.000000' y1='199.000000' x2='60.000000' y2='263.000000' style='stroke:#5f656e'/>
-<line class='delim' x1='199.000000' y1='199.000000' x2='199.000000' y2='263.000000' style='stroke:#5f656e'/>
-<a xlink:href='#user'><text x='111' y='191'>user</text><title>Table trip.user</title></a>
-  <use id='nn' x='47' y='207' xlink:href='#nn'/><a xlink:href='#user.login'><use id='pk' x='47' y='206' xlink:href='#pk'/><title>Pk pk_user ( login ) </title></a>
-<a xlink:href='#user.login'><text id='trip.user.login' x='63' y='216' onmouseover="hghl(['event_ref_user_login','trip.event.creator','expense_ref_user_login','trip.expense.user_login','expense_concerned_ref_user_login','trip.expense_concerned.concerned','user_event_ref_user_login','trip.user_event.user_login'])" onmouseout="uhghl(['event_ref_user_login','trip.event.creator','expense_ref_user_login','trip.expense.user_login','expense_concerned_ref_user_login','trip.expense_concerned.concerned','user_event_ref_user_login','trip.user_event.user_login'])">login</text><text x='195' y='217' text-anchor='end' class='colType'>varchar(30)</text><title>login
+<rect class='entity' x='45' y='158' width='165' height='90' rx='7' ry='7' style='stroke:none'/>
+<path d='M 45.00 184.00 L 45.00 165.00 Q 45.00 158.00 52.00 158.00 L 203.00 158.00 Q 210.00 158.00 210.00 165.00 L 210.00 184.00 L45.00 184.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
+<rect class='entity' x='45' y='158' width='165' height='90' rx='7' ry='7' style='fill:none;stroke:#5f656e'/>
+<line class='delim' x1='45.000000' y1='184.000000' x2='210.000000' y2='184.000000' style='stroke:#5f656e'/>
+<line class='delim' x1='60.000000' y1='184.000000' x2='60.000000' y2='248.000000' style='stroke:#5f656e'/>
+<line class='delim' x1='199.000000' y1='184.000000' x2='199.000000' y2='248.000000' style='stroke:#5f656e'/>
+<a xlink:href='#user'><text x='111' y='176'>user</text><title>Table trip.user</title></a>
+  <use id='nn' x='47' y='192' xlink:href='#nn'/><a xlink:href='#user.login'><use id='pk' x='47' y='191' xlink:href='#pk'/><title>Pk pk_user ( login ) </title></a>
+<a xlink:href='#user.login'><text id='trip.user.login' x='63' y='201' onmouseover="hghl(['event_ref_user_login','trip.event.creator','expense_ref_user_login','trip.expense.user_login','expense_concerned_ref_user_login','trip.expense_concerned.concerned','user_event_ref_user_login','trip.user_event.user_login'])" onmouseout="uhghl(['event_ref_user_login','trip.event.creator','expense_ref_user_login','trip.expense.user_login','expense_concerned_ref_user_login','trip.expense_concerned.concerned','user_event_ref_user_login','trip.user_event.user_login'])">login</text><text x='195' y='202' text-anchor='end' class='colType'>varchar(30)</text><title>login
 * varchar(30)</title></a>
-<a xlink:href='#user.login'><use id='ref' x='199' y='206' xlink:href='#ref'/><title>Referred by event ( creator -&gt; login ) 
+<a xlink:href='#user.login'><use id='ref' x='199' y='191' xlink:href='#ref'/><title>Referred by event ( creator -&gt; login ) 
 Referred by expense ( user_login -&gt; login ) 
 Referred by expense_concerned ( concerned -&gt; login ) 
 Referred by user_event ( user_login -&gt; login ) </title></a>
-  <a xlink:href='#user.password'><text id='trip.user.password' x='63' y='231'>password</text><text x='195' y='232' text-anchor='end' class='colType'>varchar(30)</text><title>password
+  <a xlink:href='#user.password'><text id='trip.user.password' x='63' y='216'>password</text><text x='195' y='217' text-anchor='end' class='colType'>varchar(30)</text><title>password
 varchar(30)</title></a>
-<text x='207' y='228' text-anchor='end' class='colType'>t</text>  <a xlink:href='#user.email'><text id='trip.user.email' x='63' y='246'>email</text><text x='195' y='247' text-anchor='end' class='colType'>varchar(50)</text><title>email
+<text x='207' y='213' text-anchor='end' class='colType'>t</text>  <a xlink:href='#user.email'><text id='trip.user.email' x='63' y='231'>email</text><text x='195' y='232' text-anchor='end' class='colType'>varchar(50)</text><title>email
 varchar(50)</title></a>
-<text x='207' y='243' text-anchor='end' class='colType'>t</text>
-<!-- ============= Table 'group_balance' ============= -->
-<rect class='entity' x='465' y='488' width='150' height='90' rx='7' ry='7' style='stroke:none'/>
-<path d='M 465.00 514.00 L 465.00 495.00 Q 465.00 488.00 472.00 488.00 L 608.00 488.00 Q 615.00 488.00 615.00 495.00 L 615.00 514.00 L465.00 514.00 ' style='fill:url(#tbg_ff0000);stroke:1;stroke-opacity:0.1;' />
-<rect class='entity' x='465' y='488' width='150' height='90' rx='7' ry='7' style='fill:none;stroke:#6e5f5f'/>
-<line class='delim' x1='465.000000' y1='514.000000' x2='615.000000' y2='514.000000' style='stroke:#6e5f5f'/>
-<line class='delim' x1='480.000000' y1='514.000000' x2='480.000000' y2='578.000000' style='stroke:#6e5f5f'/>
-<line class='delim' x1='604.000000' y1='514.000000' x2='604.000000' y2='578.000000' style='stroke:#6e5f5f'/>
-<use id='view' x='600' y='488' xlink:href='#view'/>
-<a xlink:href='#group_balance'><text x='495' y='506'>group_balance</text><title>View trip.group_balance</title></a>
-  <a xlink:href='#group_balance.user_login'><text id='trip.group_balance.user_login' x='483' y='531'>user_login</text><text x='600' y='532' text-anchor='end' class='colType'>varchar</text><title>user_login
-varchar</title></a>
-<text x='612' y='528' text-anchor='end' class='colType'>t</text>  <a xlink:href='#group_balance.event_id'><text id='trip.group_balance.event_id' x='483' y='546'>event_id</text><text x='600' y='547' text-anchor='end' class='colType'>integer</text><title>event_id
-integer</title></a>
-<text x='612' y='543' text-anchor='end' class='colType'>#</text>  <a xlink:href='#group_balance.sum'><text id='trip.group_balance.sum' x='483' y='561'>sum</text><text x='600' y='562' text-anchor='end' class='colType'>numeric</text><title>sum
-numeric</title></a>
-<text x='612' y='558' text-anchor='end' class='colType'>#</text>
-<!-- ============= Table 'parts_of_expense' ============= -->
-<rect class='entity' x='270' y='488' width='150' height='75' rx='7' ry='7' style='stroke:none'/>
-<path d='M 270.00 514.00 L 270.00 495.00 Q 270.00 488.00 277.00 488.00 L 413.00 488.00 Q 420.00 488.00 420.00 495.00 L 420.00 514.00 L270.00 514.00 ' style='fill:url(#tbg_ff0000);stroke:1;stroke-opacity:0.1;' />
-<rect class='entity' x='270' y='488' width='150' height='75' rx='7' ry='7' style='fill:none;stroke:#6e5f5f'/>
-<line class='delim' x1='270.000000' y1='514.000000' x2='420.000000' y2='514.000000' style='stroke:#6e5f5f'/>
-<line class='delim' x1='285.000000' y1='514.000000' x2='285.000000' y2='563.000000' style='stroke:#6e5f5f'/>
-<line class='delim' x1='409.000000' y1='514.000000' x2='409.000000' y2='563.000000' style='stroke:#6e5f5f'/>
-<use id='view' x='405' y='488' xlink:href='#view'/>
-<a xlink:href='#parts_of_expense'><text x='291' y='506'>parts_of_expense</text><title>View trip.parts_of_expense</title></a>
-  <a xlink:href='#parts_of_expense.expense_id'><text id='trip.parts_of_expense.expense_id' x='288' y='531'>expense_id</text><text x='405' y='532' text-anchor='end' class='colType'>integer</text><title>expense_id
-integer</title></a>
-<text x='417' y='528' text-anchor='end' class='colType'>#</text>  <a xlink:href='#parts_of_expense.parts_nb'><text id='trip.parts_of_expense.parts_nb' x='288' y='546'>parts_nb</text><text x='405' y='547' text-anchor='end' class='colType'>bigint</text><title>parts_nb
-bigint</title></a>
-<text x='417' y='543' text-anchor='end' class='colType'>#</text>
-<!-- ============= Table 'concerned_users_by_expenses' ============= -->
-<rect class='entity' x='45' y='488' width='195' height='120' rx='7' ry='7' style='stroke:none'/>
-<path d='M 45.00 514.00 L 45.00 495.00 Q 45.00 488.00 52.00 488.00 L 233.00 488.00 Q 240.00 488.00 240.00 495.00 L 240.00 514.00 L45.00 514.00 ' style='fill:url(#tbg_ff0000);stroke:1;stroke-opacity:0.1;' />
-<rect class='entity' x='45' y='488' width='195' height='120' rx='7' ry='7' style='fill:none;stroke:#6e5f5f'/>
-<line class='delim' x1='45.000000' y1='514.000000' x2='240.000000' y2='514.000000' style='stroke:#6e5f5f'/>
-<line class='delim' x1='60.000000' y1='514.000000' x2='60.000000' y2='608.000000' style='stroke:#6e5f5f'/>
-<line class='delim' x1='229.000000' y1='514.000000' x2='229.000000' y2='608.000000' style='stroke:#6e5f5f'/>
-<use id='view' x='225' y='488' xlink:href='#view'/>
-<a xlink:href='#concerned_users_by_expenses'><text x='50' y='506'>concerned_users_by_expenses</text><title>View trip.concerned_users_by_expenses</title></a>
-  <a xlink:href='#concerned_users_by_expenses.event_id'><text id='trip.concerned_users_by_expenses.event_id' x='63' y='531'>event_id</text><text x='225' y='532' text-anchor='end' class='colType'>integer</text><title>event_id
-integer</title></a>
-<text x='237' y='528' text-anchor='end' class='colType'>#</text>  <a xlink:href='#concerned_users_by_expenses.cost'><text id='trip.concerned_users_by_expenses.cost' x='63' y='546'>cost</text><text x='225' y='547' text-anchor='end' class='colType'>numeric</text><title>cost
-numeric</title></a>
-<text x='237' y='543' text-anchor='end' class='colType'>#</text>  <a xlink:href='#concerned_users_by_expenses.expense_id'><text id='trip.concerned_users_by_expenses.expense_id' x='63' y='561'>expense_id</text><text x='225' y='562' text-anchor='end' class='colType'>integer</text><title>expense_id
-integer</title></a>
-<text x='237' y='558' text-anchor='end' class='colType'>#</text>  <a xlink:href='#concerned_users_by_expenses.expense_owner'><text id='trip.concerned_users_by_expenses.expense_owner' x='63' y='576'>expense_owner</text><text x='225' y='577' text-anchor='end' class='colType'>varchar</text><title>expense_owner
-varchar</title></a>
-<text x='237' y='573' text-anchor='end' class='colType'>t</text>  <a xlink:href='#concerned_users_by_expenses.concerned'><text id='trip.concerned_users_by_expenses.concerned' x='63' y='591'>concerned</text><text x='225' y='592' text-anchor='end' class='colType'>varchar</text><title>concerned
-varchar</title></a>
-<text x='237' y='588' text-anchor='end' class='colType'>t</text>
+<text x='207' y='228' text-anchor='end' class='colType'>t</text>
 <!-- ============= Table 'user_event' ============= -->
 <rect class='entity' x='285' y='38' width='165' height='90' rx='7' ry='7' style='stroke:none'/>
 <path d='M 285.00 64.00 L 285.00 45.00 Q 285.00 38.00 292.00 38.00 L 443.00 38.00 Q 450.00 38.00 450.00 45.00 L 450.00 64.00 L285.00 64.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
@@ -421,4 +367,42 @@ varchar</title></a>
   <a xlink:href='#user_event.user_weight'><text id='trip.user_event.user_weight' x='303' y='111'>user_weight</text><text x='435' y='112' text-anchor='end' class='colType'>integer</text><title>user_weight
 integer default 1</title></a>
 <text x='447' y='108' text-anchor='end' class='colType'>#</text>
+<!-- ============= Table 'expense_concerned' ============= -->
+<rect class='entity' x='285' y='353' width='165' height='75' rx='7' ry='7' style='stroke:none'/>
+<path d='M 285.00 379.00 L 285.00 360.00 Q 285.00 353.00 292.00 353.00 L 443.00 353.00 Q 450.00 353.00 450.00 360.00 L 450.00 379.00 L285.00 379.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
+<rect class='entity' x='285' y='353' width='165' height='75' rx='7' ry='7' style='fill:none;stroke:#5f656e'/>
+<line class='delim' x1='285.000000' y1='379.000000' x2='450.000000' y2='379.000000' style='stroke:#5f656e'/>
+<line class='delim' x1='300.000000' y1='379.000000' x2='300.000000' y2='428.000000' style='stroke:#5f656e'/>
+<line class='delim' x1='439.000000' y1='379.000000' x2='439.000000' y2='428.000000' style='stroke:#5f656e'/>
+<a xlink:href='#expense_concerned'><text x='308' y='371'>expense_concerned</text><title>Table trip.expense_concerned</title></a>
+  <use id='nn' x='287' y='387' xlink:href='#nn'/><a xlink:href='#expense_concerned.expense_id'><use id='pk' x='287' y='386' xlink:href='#pk'/><title>Pk pk_expense_concerned ( expense_id, concerned ) </title></a>
+<a xlink:href='#expense_concerned.expense_id'><text id='trip.expense_concerned.expense_id' x='303' y='396' onmouseover="hghl(['expense_concerned_ref_expense_id','trip.expense.id'])" onmouseout="uhghl(['expense_concerned_ref_expense_id','trip.expense.id'])">expense_id</text><text x='435' y='397' text-anchor='end' class='colType'>integer</text><title>expense_id
+* integer</title></a>
+<a xlink:href='#expense_concerned.expense_id'><use id='fk' x='439' y='386' xlink:href='#fk'/><title>References expense ( expense_id -&gt; id ) </title></a>
+  <use id='nn' x='287' y='402' xlink:href='#nn'/><a xlink:href='#expense_concerned.concerned'><use id='pk' x='287' y='401' xlink:href='#pk'/><title>Pk pk_expense_concerned ( expense_id, concerned ) </title></a>
+<a xlink:href='#expense_concerned.concerned'><text id='trip.expense_concerned.concerned' x='303' y='411' onmouseover="hghl(['expense_concerned_ref_user_login','trip.user.login'])" onmouseout="uhghl(['expense_concerned_ref_user_login','trip.user.login'])">concerned</text><text x='435' y='412' text-anchor='end' class='colType'>varchar(30)</text><title>concerned
+* varchar(30)</title></a>
+<a xlink:href='#expense_concerned.concerned'><use id='fk' x='439' y='401' xlink:href='#fk'/><title>References user ( concerned -&gt; login ) </title></a>
+
+<!-- ============= Table 'event' ============= -->
+<rect class='entity' x='540' y='158' width='150' height='105' rx='7' ry='7' style='stroke:none'/>
+<path d='M 540.00 184.00 L 540.00 165.00 Q 540.00 158.00 547.00 158.00 L 683.00 158.00 Q 690.00 158.00 690.00 165.00 L 690.00 184.00 L540.00 184.00 ' style='fill:url(#tbg_bfd4f5);stroke:1;stroke-opacity:0.1;' />
+<rect class='entity' x='540' y='158' width='150' height='105' rx='7' ry='7' style='fill:none;stroke:#5f656e'/>
+<line class='delim' x1='540.000000' y1='184.000000' x2='690.000000' y2='184.000000' style='stroke:#5f656e'/>
+<line class='delim' x1='555.000000' y1='184.000000' x2='555.000000' y2='263.000000' style='stroke:#5f656e'/>
+<line class='delim' x1='679.000000' y1='184.000000' x2='679.000000' y2='263.000000' style='stroke:#5f656e'/>
+<a xlink:href='#event'><text x='596' y='176'>event</text><title>Table trip.event</title></a>
+  <use id='nn' x='542' y='192' xlink:href='#nn'/><a xlink:href='#event.id'><use id='pk' x='542' y='191' xlink:href='#pk'/><title>Pk pk_event ( id ) </title></a>
+<a xlink:href='#event.id'><text id='trip.event.id' x='558' y='201' onmouseover="hghl(['expense_ref_event_id','trip.expense.event_id','user_event_ref_event_id','trip.user_event.event_id'])" onmouseout="uhghl(['expense_ref_event_id','trip.expense.event_id','user_event_ref_event_id','trip.user_event.event_id'])">id</text><text x='675' y='202' text-anchor='end' class='colType'>serial</text><title>id
+* serial</title></a>
+<a xlink:href='#event.id'><use id='ref' x='679' y='191' xlink:href='#ref'/><title>Referred by expense ( event_id -&gt; id ) 
+Referred by user_event ( event_id -&gt; id ) </title></a>
+  <a xlink:href='#event.name'><text id='trip.event.name' x='558' y='216'>name</text><text x='675' y='217' text-anchor='end' class='colType'>text</text><title>name
+text</title></a>
+<text x='687' y='213' text-anchor='end' class='colType'>t</text>  <a xlink:href='#event.date'><text id='trip.event.date' x='558' y='231'>date</text><text x='675' y='232' text-anchor='end' class='colType'>timestamp</text><title>date
+timestamp</title></a>
+<text x='687' y='228' text-anchor='end' class='colType'>d</text>  <a xlink:href='#event.creator'><text id='trip.event.creator' x='558' y='246' onmouseover="hghl(['event_ref_user_login','trip.user.login'])" onmouseout="uhghl(['event_ref_user_login','trip.user.login'])">creator</text><text x='675' y='247' text-anchor='end' class='colType'>varchar(30)</text><title>creator
+varchar(30)</title></a>
+<a xlink:href='#event.creator'><use id='fk' x='679' y='236' xlink:href='#fk'/><title>References user ( creator -&gt; login ) </title></a>
+
 </g></svg>

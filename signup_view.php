@@ -71,7 +71,7 @@ if (Session::exist_session()) {
 								</p>
                                 <p class="change_link">
 									Vous avez déjà un compte?
-									<a href="signin.php" class="to_register">Connexion</a>
+									<a href="signin_view.php" class="to_register">Connexion</a>
 								</p>
                             </form>
                         </div>
